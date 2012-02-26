@@ -31,9 +31,9 @@ namespace SampleAppForCheckBoxList.Infrastructure
                 for (int index = 0; index < txtValues.Count(); index++)
                 {
                     CheckBoxListItem _item = new CheckBoxListItem();
-                    _item.Text = ((string[])bindingContext.ValueProvider.GetValue(txtValues[index]).RawValue).First();
-                    _item.Value = ((string[])bindingContext.ValueProvider.GetValue(valValues[index]).RawValue).First();
-                    _item.IsChecked = bool.Parse(((string[])bindingContext.ValueProvider.GetValue(hdnValues[index]).RawValue).First());
+                    _item.Text = bindingContext.GetValue(txtValues[index]);
+                    _item.Value = bindingContext.GetValue(valValues[index]);
+                    _item.IsChecked = bool.Parse(bindingContext.GetValue(hdnValues[index]));
 
                     model.Items.Add(_item);
                 }
