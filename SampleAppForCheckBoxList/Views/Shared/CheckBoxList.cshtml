@@ -1,0 +1,15 @@
+﻿@model SampleAppForCheckBoxList.Models.CheckBoxListViewModel
+@using SampleAppForCheckBoxList.Infrastructure
+
+<div class="cpHeader">
+    @Html.CheckBoxListHeader(Model.HeaderText)
+</div>
+<div class="cpContent">
+    @foreach (var item in Model.Items)
+    {
+        @Html.CheckBoxValue(Model.HeaderText, item, Model.Items.IndexOf(item))
+        @Html.CheckBoxInput(Model.HeaderText, item, Model.Items.IndexOf(item))
+        @Html.CheckBoxInputLabel(Model.HeaderText, item, Model.Items.IndexOf(item))
+        <br />
+    }
+</div>

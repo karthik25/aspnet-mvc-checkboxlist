@@ -1,0 +1,40 @@
+﻿@model List<SampleAppForCheckBoxList.Models.CheckBoxListViewModel>
+
+@{
+    ViewBag.Title = "Multiple CheckBox Lists";
+}
+
+<h2>Multiple Check Box Lists</h2>
+
+@using (Html.BeginForm())
+{
+    <table cellspacing="10">
+        <tr>
+            <td>
+                @Html.Partial("CheckBoxList", Model[0])
+            </td>
+            <td>
+                @Html.Partial("CheckBoxList", Model[1])
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input type="submit" value="Submit" />
+}
+
+<table cellspacing="10">
+    <tr>
+        <td>
+            @if (ViewData["Choices1"] != null)
+            {
+                <h2>@ViewData["Choices1"]</h2>
+            }            
+        </td>
+        <td>
+            @if (ViewData["Choices2"] != null)
+            {
+                <h2>@ViewData["Choices2"]</h2>
+            }
+        </td>
+    </tr>
+</table>

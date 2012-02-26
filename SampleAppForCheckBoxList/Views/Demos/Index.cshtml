@@ -1,0 +1,23 @@
+﻿@model SampleAppForCheckBoxList.Models.CheckBoxListViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("CheckBoxList", Model)
+    <br />
+    <input type="submit" value="Submit" />
+}
+
+@if (ViewData["Choices"] != null)
+{
+    <h2>@ViewData["Choices"]</h2>
+}
+
+<br />
+
+@Html.ActionLink("Two Check Box Lists", "MultipleCheckBoxLists")
