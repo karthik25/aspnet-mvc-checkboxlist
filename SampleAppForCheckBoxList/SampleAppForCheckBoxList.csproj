@@ -65,6 +65,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\CheckBoxListValuesModelBinder.cs" />
     <Compile Include="Infrastructure\CheckBoxListViewModelBinder.cs" />
     <Compile Include="Infrastructure\CustomHtmlHelpers.cs" />
     <Compile Include="Infrastructure\ModelBindingContextHelpers.cs" />
@@ -157,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Demos\MultipleCheckBoxLists.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Demos\Results.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Demos\CheckBoxLists.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -1,0 +1,14 @@
+﻿@model SampleAppForCheckBoxList.Models.CheckBoxListViewModel
+
+@{
+    ViewBag.Title = "CheckBoxLists";
+}
+
+<h2>CheckBoxLists</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("CheckBoxList", Model)
+    <br />
+    <input type="submit" value="Submit" />
+}

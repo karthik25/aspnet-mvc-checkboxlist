@@ -35,6 +35,23 @@ namespace SampleAppForCheckBoxList.Controllers
             return View(models);
         }
 
+        public ActionResult CheckBoxLists()
+        {
+            return View(GetModel());
+        }
+        
+        [HttpPost]
+        public ActionResult CheckBoxLists(CheckBoxListValues values)
+        {
+            ViewData["SelectedChoices"] = string.Join(",", values.SelectedValues.ToArray());
+            return View("Results");
+        }
+
+        public ActionResult Results()
+        {
+            return View();
+        }
+
         private CheckBoxListViewModel GetModel()
         {
             var model = new CheckBoxListViewModel();

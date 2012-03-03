@@ -38,6 +38,9 @@ namespace SampleAppForCheckBoxList
             ModelBinders.Binders.Add(typeof(CheckBoxListViewModel), new CheckBoxListViewModelBinder());
             ModelBinders.Binders.Add(typeof(List<CheckBoxListViewModel>), new CheckBoxListViewModelBinder());
 
+            ModelBinders.Binders.Add(typeof(CheckBoxListValues), new CheckBoxListValuesModelBinder());
+            ModelBinders.Binders.Add(typeof(List<CheckBoxListValues>), new CheckBoxListValuesModelBinder());
+
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }

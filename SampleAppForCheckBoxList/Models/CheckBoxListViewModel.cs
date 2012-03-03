@@ -15,4 +15,10 @@ namespace SampleAppForCheckBoxList.Models
             return this.Items.Where(s => s.IsChecked).Select(s => s.Value).ToArray();
         }
     }
+
+    public class CheckBoxListValues
+    {
+        public string HeaderText { get; set; }
+        public List<string> SelectedValues { get; set; }
+    }
 }

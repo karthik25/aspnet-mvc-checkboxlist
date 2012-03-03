@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Results</h2>
+
+@if (ViewData["SelectedChoices"] != null)
+{
+    <div>@ViewData["SelectedChoices"].ToString()</div>
+}
